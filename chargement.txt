@@ -1,0 +1,9 @@
+1. Le main va créer un objet ChargeurMagasin avec le nom du repertoire en paramètre. 
+2. Appelle ensuite la méthode chargerMagasin() 
+3. Cette méthode va créer un objet Magasin 
+4. Puis va appeler la créer un objet ChargeurCD avec le nom de fichier en paramètre
+5. Ensuite appelle la méthode chargerCD qui va commencer par créer un CD 
+6. On appelle la méthode extrairePiste de la classe ChargeurCD qui va renvoyer le descriptif de la piste
+7. On va ensuite ajouter la piste sur l'objet CD en appelant la méthode ajouterPiste avec l'objet Infopiste en paramètre
+8. On extrait ensuite une seconde piste et on va ajouter celle-ci sur le CD avec la méthode ajouterPiste. 
+9. Enfin l'objet ChargeurMagasin va ajouter le CD créer précedemment au magasin
