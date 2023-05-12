@@ -56,7 +56,7 @@ public class Magasin {
 	}
 	
 	/**
-	 * permet d'acceder à un CD
+	 * permet d'acceder ï¿½ un CD
 	 * 
 	 * @return le cd a l'indice i ou null si indice est non valide
 	 */
@@ -69,5 +69,10 @@ public class Magasin {
 	}
 
 	// TODO  ajouter une methode de tri
+	public void trierAriste(){
 
+	}
+	public void trierAlbum(){
+		
+	}
 }

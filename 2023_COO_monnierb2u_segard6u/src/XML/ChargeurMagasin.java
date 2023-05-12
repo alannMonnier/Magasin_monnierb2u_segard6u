@@ -77,6 +77,7 @@ public class ChargeurMagasin {
 			System.out.println("Fichier " + fichier.getName() + " non lisible");
 		} 
 		return (null);
+
 	}
 
 }
