@@ -70,7 +70,7 @@ public class Magasin {
         for (int i = 0; i < listeCds.size() - 2; i++) {
             String s = listeCds.get(i).getNomCD();
             int a = i + 1;
-            int min = listeCds.get(i + 1).getNomCD().compareTo(s);
+            int min = s.compareTo(listeCds.get(i + 1).getNomCD());
             for (int x = i + 2; x < listeCds.size() - 1; x++) {
                 if (s.compareTo(listeCds.get(x).getNomCD()) < min) {
                     min = s.compareTo(listeCds.get(x).getNomCD());
@@ -89,7 +89,7 @@ public class Magasin {
 		for (int i = 0; i < listeCds.size() - 2; i++) {
 			String s = listeCds.get(i).getNomArtiste();
 			int a = i + 1;
-			int min = listeCds.get(i + 1).getNomArtiste().compareTo(s);
+			int min = s.compareTo(listeCds.get(i + 1).getNomCD());
 			for (int x = i + 2; x < listeCds.size() - 1; x++) {
 				if (s.compareTo(listeCds.get(x).getNomArtiste()) < min) {
 					min = s.compareTo(listeCds.get(x).getNomArtiste());
