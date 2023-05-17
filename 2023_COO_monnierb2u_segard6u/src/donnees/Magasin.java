@@ -23,6 +23,7 @@ public class Magasin {
 		listeCds = new ArrayList<CD>();
 	}
 
+
 	/**
 	 * ajoute un cd au magasin
 	 * 
