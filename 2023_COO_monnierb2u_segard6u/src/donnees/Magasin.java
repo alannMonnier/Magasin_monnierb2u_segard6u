@@ -22,14 +22,18 @@ public class Magasin {
         listeCds = new ArrayList<CD>();
     }
 
-    /**
-     * ajoute un cd au magasin
-     *
-     * @param cdAAjouter le cd a ajouter
-     */
-    public void ajouteCd(CD cdAAjouter) {
-        listeCds.add(cdAAjouter);
-    }
+
+
+	/**
+	 * ajoute un cd au magasin
+	 * 
+	 * @param cdAAjouter
+	 *            le cd a ajouter
+	 */
+	public void ajouteCd(CD cdAAjouter) {
+		listeCds.add(cdAAjouter);
+	}
+
 
     @Override
     /**

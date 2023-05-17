@@ -97,6 +97,7 @@ public class CD {
 		return (resultat);
 	}
 
+
 	public String getNomArtiste() {
 		return nomArtiste;
 	}
@@ -104,5 +105,5 @@ public class CD {
 	public String getNomCD() {
 		return nomCD;
 	}
-	// TODO
+
 }
