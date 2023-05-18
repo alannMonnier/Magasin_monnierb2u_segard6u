@@ -70,14 +70,14 @@ public class Magasin {
     }
 
     // TODO  ajouter une methode de tri
-    public void trierAriste() {
-        for (int i = 0; i < listeCds.size() - 2; i++) {
+    public void trierAlbum() {
+        for (int i = 0; i < listeCds.size() - 1; i++) {
             String s = listeCds.get(i).getNomCD();
-            int a = i + 1;
-            int min = s.compareTo(listeCds.get(i + 1).getNomCD());
-            for (int x = i + 2; x < listeCds.size() - 1; x++) {
-                if (s.compareTo(listeCds.get(x).getNomCD()) < min) {
-                    min = s.compareTo(listeCds.get(x).getNomCD());
+            int a = i+1;
+            int min = listeCds.get(a).getNomCD().compareTo(s);
+            for (int x = i + 2; x < listeCds.size(); x++) {
+                if (listeCds.get(x).getNomCD().compareTo(s) < min) {
+                    min = listeCds.get(x).getNomCD().compareTo(s);
 					a = x;
                 }
             }
@@ -89,14 +89,14 @@ public class Magasin {
         }
     }
 
-    public void trierAlbum() {
-		for (int i = 0; i < listeCds.size() - 2; i++) {
+    public void trierArtiste() {
+		for (int i = 0; i < listeCds.size() - 1; i++) {
 			String s = listeCds.get(i).getNomArtiste();
-			int a = i + 1;
-			int min = s.compareTo(listeCds.get(i + 1).getNomCD());
-			for (int x = i + 2; x < listeCds.size() - 1; x++) {
-				if (s.compareTo(listeCds.get(x).getNomArtiste()) < min) {
-					min = s.compareTo(listeCds.get(x).getNomArtiste());
+			int a = i+1;
+            int min = listeCds.get(a).getNomArtiste().compareTo(s);
+			for (int x = i + 2; x < listeCds.size(); x++) {
+				if (listeCds.get(x).getNomArtiste().compareTo(s) < min) {
+					min = listeCds.get(x).getNomArtiste().compareTo(s);
 					a = x;
 				}
 			}
