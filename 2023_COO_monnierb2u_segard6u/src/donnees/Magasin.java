@@ -1,6 +1,5 @@
 package donnees;
 import java.util.ArrayList;
-
 /**
  * La classe Magasin represente un magasin qui vend des CDs.</p>
  *
@@ -66,6 +65,7 @@ public class Magasin {
             res=this.listeCds.get(i);
         return(res);
     }
+
 
     // TODO ajouter methode de tri
     public void trierGeneral(ComparateurCD c){
@@ -138,3 +138,4 @@ public class Magasin {
     // FinTODO ajouter une methode de tri
 
 }
+
