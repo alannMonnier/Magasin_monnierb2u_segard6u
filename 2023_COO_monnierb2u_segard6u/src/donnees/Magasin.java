@@ -13,6 +13,10 @@ public class Magasin {
      */
     private ArrayList<CD> listeCds;
 
+    public ArrayList<CD> getListeCds() {
+        return listeCds;
+    }
+
     /**
      * construit un magasin par defaut qui ne contient pas de CD
      */
