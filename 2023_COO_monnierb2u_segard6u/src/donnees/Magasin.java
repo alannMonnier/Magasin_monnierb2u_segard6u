@@ -1,5 +1,7 @@
 package donnees;
 import java.util.ArrayList;
+import java.util.List;
+
 /**
  * La classe Magasin represente un magasin qui vend des CDs.</p>
  *
@@ -86,6 +88,15 @@ public class Magasin {
             listeCds.set(indiceSelection, listeCds.get(i));
             listeCds.set(i, cdSelectionne);
         }
+    }
+    public ArrayList<CD> chercherArtiste(Selecteur se,String s){
+        ArrayList<CD> res = new ArrayList<>();
+        for(CD cd : listeCds){
+            if(se.garderCd(cd)){
+                res.add(cd);
+            }
+        }
+        return res;
     }
 }
 
