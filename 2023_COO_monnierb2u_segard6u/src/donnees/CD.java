@@ -97,6 +97,9 @@ public class CD {
 		return (resultat);
 	}
 
+	public int nbPistes() {
+		return pistes.size();
+	}
 
 	public String getNomArtiste() {
 		return nomArtiste;

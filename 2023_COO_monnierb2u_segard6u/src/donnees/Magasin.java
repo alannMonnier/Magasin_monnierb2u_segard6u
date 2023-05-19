@@ -87,55 +87,5 @@ public class Magasin {
             listeCds.set(i, cdSelectionne);
         }
     }
-    /**
-     * permet de trier par nom d'artistes croissant
-     */
-    /**
-    public void trierAriste() {
-        // tri par selection
-        int nbCDs = this.listeCds.size();
-        for (int i = 0; i < nbCDs; i++) {
-            CD cdSelectionne = this.listeCds.get(i);
-
-            //Selectionne le plus petit
-            int indiceSelection = i;
-            for (int j = i + 1; j < nbCDs; j++) {
-                CD cdTemp = listeCds.get(j);
-                if (cdTemp.etreAvantArtiste(cdSelectionne)) {
-                    indiceSelection = j;
-                    cdSelectionne = cdTemp;
-                }
-            }
-            listeCds.set(indiceSelection, listeCds.get(i));
-            listeCds.set(i, cdSelectionne);
-        }
-    }*/
-
-    /**
-     * permet de trier par nom d'album croissant
-     */
-    /**
-    public void trierAlbum() {
-        // tri par selection
-        int nbCDs = this.listeCds.size();
-        for (int i = 0; i < nbCDs; i++) {
-            CD cdSelectionne = this.listeCds.get(i);
-
-            //selectionne plus petit
-            int indiceSelection = i;
-            for (int j = i + 1; j < nbCDs; j++) {
-                CD cdTemp = listeCds.get(j);
-                if (cdTemp.etreAvantAlbum(cdSelectionne)) {
-                    indiceSelection = j;
-                    cdSelectionne = cdTemp;
-                }
-            }
-            listeCds.set(indiceSelection, listeCds.get(i));
-            listeCds.set(i, cdSelectionne);
-        }
-    }*/
-
-    // FinTODO ajouter une methode de tri
-
 }
 
