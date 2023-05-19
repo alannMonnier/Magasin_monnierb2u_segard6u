@@ -16,7 +16,7 @@ class MagasinTest {
         ChargeurMagasin charge = new ChargeurMagasin(repertoire);
         Magasin resultat = charge.chargerMagasin();
 
-        resultat.trierAriste();
+        //resultat.trierAriste();
         for (int i =0; i<resultat.getNombreCds(); i++){
                 System.out.println(resultat.getListeCds().get(i).getNomCD());
         }

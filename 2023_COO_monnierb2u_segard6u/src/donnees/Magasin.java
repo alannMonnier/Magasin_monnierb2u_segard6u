@@ -1,12 +1,12 @@
 package donnees;
-
 import java.util.ArrayList;
 
 /**
  * La classe Magasin represente un magasin qui vend des CDs.</p>
- * <p>
+ *
  * cette classe est caracterisee par un ensemble de CDs correspondant aux CDS
  * vendus dans ce magasin.
+ *
  */
 public class Magasin {
 
@@ -15,10 +15,6 @@ public class Magasin {
      */
     private ArrayList<CD> listeCds;
 
-    public ArrayList<CD> getListeCds() {
-        return listeCds;
-    }
-
     /**
      * construit un magasin par defaut qui ne contient pas de CD
      */
@@ -26,18 +22,15 @@ public class Magasin {
         listeCds = new ArrayList<CD>();
     }
 
-
-
-	/**
-	 * ajoute un cd au magasin
-	 * 
-	 * @param cdAAjouter
-	 *            le cd a ajouter
-	 */
-	public void ajouteCd(CD cdAAjouter) {
-		listeCds.add(cdAAjouter);
-	}
-
+    /**
+     * ajoute un cd au magasin
+     *
+     * @param cdAAjouter
+     *            le cd a ajouter
+     */
+    public void ajouteCd(CD cdAAjouter) {
+        listeCds.add(cdAAjouter);
+    }
 
     @Override
     /**
@@ -66,49 +59,82 @@ public class Magasin {
      *
      * @return le cd a l'indice i ou null si indice est non valide
      */
-    public CD getCd(int i) {
-        CD res = null;
-        if ((i >= 0) && (i < this.listeCds.size()))
-            res = this.listeCds.get(i);
-        return (res);
+    public CD getCd(int i)
+    {
+        CD res=null;
+        if ((i>=0)&&(i<this.listeCds.size()))
+            res=this.listeCds.get(i);
+        return(res);
     }
 
-    // TODO  ajouter une methode de tri
-    public void trierAlbum() {
-        for (int i = 0; i < listeCds.size() - 1; i++) {
-            String s = listeCds.get(i).getNomCD();
-            int a = i+1;
-            int min = listeCds.get(a).getNomCD().compareTo(s);
-            for (int x = i + 2; x < listeCds.size(); x++) {
-                if (listeCds.get(x).getNomCD().compareTo(s) < min) {
-                    min = listeCds.get(x).getNomCD().compareTo(s);
-					a = x;
+    // TODO ajouter methode de tri
+    public void trierGeneral(ComparateurCD c){
+        // tri par selection
+        int nbCDs = this.listeCds.size();
+        for (int i = 0; i < nbCDs; i++) {
+            CD cdSelectionne = this.listeCds.get(i);
+
+            //Selectionne le plus petit
+            int indiceSelection = i;
+            for (int j = i + 1; j < nbCDs; j++) {
+                CD cdTemp = listeCds.get(j);
+                if (c.etreAvant(cdTemp, cdSelectionne)) {
+                    indiceSelection = j;
+                    cdSelectionne = cdTemp;
                 }
             }
-			if(min<0){
-				CD c = listeCds.get(a);
-				listeCds.set(a,listeCds.get(i));
-				listeCds.set(i,c);
-			}
+            listeCds.set(indiceSelection, listeCds.get(i));
+            listeCds.set(i, cdSelectionne);
         }
     }
+    /**
+     * permet de trier par nom d'artistes croissant
+     */
+    /**
+    public void trierAriste() {
+        // tri par selection
+        int nbCDs = this.listeCds.size();
+        for (int i = 0; i < nbCDs; i++) {
+            CD cdSelectionne = this.listeCds.get(i);
 
-    public void trierArtiste() {
-		for (int i = 0; i < listeCds.size() - 1; i++) {
-			String s = listeCds.get(i).getNomArtiste();
-			int a = i+1;
-            int min = listeCds.get(a).getNomArtiste().compareTo(s);
-			for (int x = i + 2; x < listeCds.size(); x++) {
-				if (listeCds.get(x).getNomArtiste().compareTo(s) < min) {
-					min = listeCds.get(x).getNomArtiste().compareTo(s);
-					a = x;
-				}
-			}
-			if(min<0){
-				CD c = listeCds.get(a);
-				listeCds.set(a,listeCds.get(i));
-				listeCds.set(i,c);
-			}
-		}
-    }
+            //Selectionne le plus petit
+            int indiceSelection = i;
+            for (int j = i + 1; j < nbCDs; j++) {
+                CD cdTemp = listeCds.get(j);
+                if (cdTemp.etreAvantArtiste(cdSelectionne)) {
+                    indiceSelection = j;
+                    cdSelectionne = cdTemp;
+                }
+            }
+            listeCds.set(indiceSelection, listeCds.get(i));
+            listeCds.set(i, cdSelectionne);
+        }
+    }*/
+
+    /**
+     * permet de trier par nom d'album croissant
+     */
+    /**
+    public void trierAlbum() {
+        // tri par selection
+        int nbCDs = this.listeCds.size();
+        for (int i = 0; i < nbCDs; i++) {
+            CD cdSelectionne = this.listeCds.get(i);
+
+            //selectionne plus petit
+            int indiceSelection = i;
+            for (int j = i + 1; j < nbCDs; j++) {
+                CD cdTemp = listeCds.get(j);
+                if (cdTemp.etreAvantAlbum(cdSelectionne)) {
+                    indiceSelection = j;
+                    cdSelectionne = cdTemp;
+                }
+            }
+            listeCds.set(indiceSelection, listeCds.get(i));
+            listeCds.set(i, cdSelectionne);
+        }
+    }*/
+
+    // FinTODO ajouter une methode de tri
+
 }
